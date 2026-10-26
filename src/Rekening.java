@@ -35,4 +35,12 @@ public class Rekening {
         saldo -= jumlah;
         return true;
     }
+    public void cetakInfo() {
+        System.out.println(nomor + " | " + String.format("%-6s", pemilik) + " | "
+                + String.format("%12s", formatRupiah(saldo)));
+    }
+
+    private static String formatRupiah(int jumlah) {
+        return "Rp" + String.format("%,d", jumlah).replace(',', '.');
+    }
 }

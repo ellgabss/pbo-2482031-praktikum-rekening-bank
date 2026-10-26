@@ -34,6 +34,9 @@ public class BankMini {
         System.out.println();
         System.out.println("=========== SALDO AKHIR ===========");
         rekening.cetakInfo();
+        // Percobaan mengubah saldo langsung dari luar class. Hasilnya error saat di-compile.
+        // Pesan error: saldo has private access in Rekening
+        // rekening.saldo = 1000000; -Baris ini dijadikan komentar supaya program bisa di-compile lagi.
         input.close();
     }
 }
